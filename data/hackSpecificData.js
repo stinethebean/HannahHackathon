@@ -1,7 +1,7 @@
 module.exports = {
   hackName: 'CalHacks',
-  surveyLink: 'aka.ms/CalHacksSurvery',
-  prize: 'an XBox One',
+  surveyLink: 'https://aka.ms/CalHacks',
+  prize: 'GoPro Hero 5',
   teamMembers: [
     {
       name: 'Justine',
@@ -9,13 +9,13 @@ module.exports = {
       photoLink: 'samplelink.com'
     },
     {
-      name: 'James',
-      techFocus: ['JavaScript', 'Web'],
+      name: 'Annie',
+      techFocus: ['Cognitive Services', 'Logistics'],
       photoLink: 'samplelink.com'
     },
     {
-      name: 'Annie',
-      techFocus: ['Cognitive Services', 'Logistics'],
+      name: 'Pablo',
+      techFocus: ['Azure', 'IaaS', 'Web'],
       photoLink: 'samplelink.com'
     }
   ]
