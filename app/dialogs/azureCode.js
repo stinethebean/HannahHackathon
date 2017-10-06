@@ -6,26 +6,18 @@ const hackData = require('../../data/hackSpecificData')
 const lib = new builder.Library('azureCode')
 lib.dialog('/', [
   function (session, args, next) {
-    builder.Prompts.text(session, 'Ok lets get you set up! What is your full name?')
+    builder.Prompts.text(session, 'Ok let\'s get you set up! What\'s your name?')
   },
   function (session, results, next) {
     session.userData.name = results.response
-    session.beginDialog('/email')
-  },
-  function (session, results, next) {
-    session.userData.email = results.response
-    session.beginDialog('/phone')
-  },
-  function (session, results, next) {
-    session.userData.phone = results.response
     session.beginDialog('/school')
   },
   function (session, results, next) {
     session.userData.school = results.response
-    session.beginDialog('/project')
+    session.beginDialog('/email')
   },
   function (session, results, next) {
-    session.userData.project = results.response
+    session.userData.email = results.response
     session.beginDialog('/pass')
   },
   function (session, results, next) {
@@ -38,6 +30,7 @@ lib.dialog('/', [
 
     // We are in the middle of a form, so unless someone needs help just continue
     if (id !== 'botHelp:/') {
+      // TODO: investigate if we can pass what was previously said and avoid printing the default "I didn't understand" msg
       session.routeToActiveDialog()
     } else {
       session.clearDialogStack()
@@ -46,9 +39,18 @@ lib.dialog('/', [
   }
 })
 
+lib.dialog('/school', [
+  function (session) {
+    builder.Prompts.text(session, 'What university do you go to?')
+  },
+  function (session, results) {
+    session.endDialogWithResult(results)
+  }
+])
+
 lib.dialog('/email', [
   function (session) {
-    builder.Prompts.text(session, 'What is your email address?')
+    builder.Prompts.text(session, 'What\'s your email address? We will send your pass to the email you provide and gaurantee to not use it for any other purpose.')
   },
   function (session, results) {
     if (validator.isEmail(results.response)) {
@@ -60,37 +62,28 @@ lib.dialog('/email', [
   }
 ])
 
-lib.dialog('/phone', [
-  function (session) {
-    builder.Prompts.text(session, 'What is your phone number?')
-  },
-  function (session, results) {
-    if (validator.isMobilePhone(results.response.replace(/[^0-9]/g, ''), 'en-US')) {
-      session.endDialogWithResult(results)
-    } else {
-      session.send('Invalid phone number. Please try again.')
-      session.beginDialog('/phone')
-    }
-  }
-])
+// lib.dialog('/phone', [
+//   function (session) {
+//     builder.Prompts.text(session, 'What is your phone number?')
+//   },
+//   function (session, results) {
+//     if (validator.isMobilePhone(results.response.replace(/[^0-9]/g, ''), 'en-US')) {
+//       session.endDialogWithResult(results)
+//     } else {
+//       session.send('Invalid phone number. Please try again.')
+//       session.beginDialog('/phone')
+//     }
+//   }
+// ])
 
-lib.dialog('/school', [
-  function (session) {
-    builder.Prompts.text(session, 'What university do you go to?')
-  },
-  function (session, results) {
-    session.endDialogWithResult(results)
-  }
-])
-
-lib.dialog('/project', [
-  function (session) {
-    builder.Prompts.text(session, "That's Awesome! Tell me a little bit about your project!")
-  },
-  function (session, results) {
-    session.endDialogWithResult(results)
-  }
-])
+// lib.dialog('/project', [
+//   function (session) {
+//     builder.Prompts.text(session, "We're almost done! Tell me a little bit about your project!")
+//   },
+//   function (session, results) {
+//     session.endDialogWithResult(results)
+//   }
+// ])
 
 lib.dialog('/pass', [
   function (session, args, next) {

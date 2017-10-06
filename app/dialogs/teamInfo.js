@@ -1,6 +1,8 @@
 const builder = require('botbuilder')
 const createCard = require('../utilities/createCard')
 
+// TODO: session.message.source
+
 const lib = new builder.Library('teamInfo')
 lib.dialog('/', [
   function (session, args, next) {
@@ -8,8 +10,8 @@ lib.dialog('/', [
     const card = createCard(session)
 
     // attach the card to the reply message
-    const msg = new builder.Message(session).addAttachment(card)
-    session.send(msg)
+    // const msg = new builder.Message(session).addAttachment(card)
+    session.send(card)
     session.endDialog('Come stop by the booth and meet our team! We can help you out with your projects and bounce ideas around... or just hang out :)')
   }
 ]).triggerAction({

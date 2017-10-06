@@ -9,12 +9,13 @@ Hannah was built to assist with hackathons! She has 3 main capabilities:
 ## Customize Her to Your Needs
 You can customize the technologies and team members for each hackathon so Hannah can be more reusable. 
 
-Hannah's hackathon specific settings are in the `data/hackSpecificData.js` file. You can customize the name of the hackathon, survey link, prize, and team members in the following format. Each team member will be picked up by the `app/dialogs/teamInfo` dialog and added to the card of team members automatically.
+Hannah's hackathon specific settings are in the `data/hackSpecificData.js` file. You can customize the name of the hackathon, survey link, team email alias, prize, and team members in the following format. Each team member will be picked up by the `app/dialogs/teamInfo` dialog and added to the card of team members automatically.
 
 ```javascript
 {
   hackName: 'CalHacks',
   surveyLink: 'aka.ms/CalHacksSurvery',
+  teamEmail: 'calhacks@microsoft.com',
   prize: 'an XBox One',
   teamMembers: [
     {

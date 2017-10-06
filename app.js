@@ -31,6 +31,7 @@ bot.library(require('./app/dialogs/endConvo').createLibrary())
 bot.library(require('./app/dialogs/botHelp').createLibrary())
 bot.library(require('./app/dialogs/none').createLibrary())
 
+// TODO add server proxy for ifame
 server.get(/\/?.*/, restify.plugins.serveStatic({
   directory: __dirname,
   default: 'index.html'

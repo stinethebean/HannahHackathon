@@ -4,7 +4,6 @@ const builder = require('botbuilder')
 const lib = new builder.Library('none')
 lib.dialog('/', [
   function (session, args, next) {
-    // TODO: Investigate why there is an if block here
     if (args.text === 'no') {
     } else {
       session.send("I'm sorry, I didn't understand that.")
