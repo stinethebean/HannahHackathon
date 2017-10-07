@@ -12,12 +12,20 @@ module.exports = [
     prompt: 'For Cognitive Services docs head to https://azure.microsoft.com/en-us/services/cognitive-services/ or stop by the booth and we can help you out!'
   },
   {
+    name: 'C#',
+    prompt: 'For help with C# or .NET you can visit https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/ or ask for someone at the booth!'
+  },
+  {
     name: 'HoloLens',
     prompt: 'If you need help with Hololens, you can talk to someone at our booth or check out the docs at https://docs.microsoft.com/en-us/hololens/.'
   },
   {
     name: 'IoT',
     prompt: 'For Azure IoT you can check out https://docs.microsoft.com/en-us/azure/iot-hub/ . You can also ask for someone at the booth!'
+  },
+  {
+    name: 'JavaScript',
+    prompt: 'If you\'re looking for help with JavaScript, you can start by looking at https://docs.microsoft.com/en-us/scripting/javascript/javascript-fundamentals, or come ask one of us at the booth!'
   },
   {
     name: 'Unity',

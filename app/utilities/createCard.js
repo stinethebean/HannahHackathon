@@ -2,25 +2,6 @@ const builder = require('botbuilder')
 const hackData = require('../../data/hackSpecificData')
 
 module.exports = (session) => {
-  // var members = []
-  //   // Populate array of team members
-  // hackData.teamMembers.forEach(t => {
-  //   var focus = ''
-  //   // Create string to represent each member's focus
-  //   t.techFocus.forEach((f, i) => {
-  //     if (i === t.techFocus.length - 1) {
-  //       focus += `${f} `
-  //       return
-  //     }
-  //     focus += `${f}, `
-  //   })
-
-  //   // Create card representing each member and add it to the arry
-  //   members.push(builder.ReceiptItem.create(session, '', t.name)
-  //     .subtitle(focus)
-  //     .quantity(400)
-  //     .image(builder.CardImage.create(session, t.photoLink)))
-  // })
   var body = []
   body.push({
     type: 'TextBlock',
@@ -91,7 +72,7 @@ module.exports = (session) => {
     $schema: 'http://adaptivecards.io/schemas/adaptive-card.json',
     version: '1.0',
     type: 'AdaptiveCard',
-    body: [body]
+    body: body
   }
 
   var msg = new builder.Message(session)

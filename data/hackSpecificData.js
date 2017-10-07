@@ -11,32 +11,32 @@ module.exports = {
     },
     {
       name: 'Davies',
-      techFocus: ['Algorithms', 'Web Dev', 'NLP', 'UI/UX'],
+      techFocus: ['Algorithms', 'NLP', 'UI/UX', 'Web Dev'],
       photoLink: '../images/Davies.png'
     },
     {
       name: 'Justine',
-      techFocus: ['Bot Framework', 'Cognitive Services', 'Web'],
-      photoLink: '../images/Justine.jpg'
+      techFocus: ['Bot Framework', 'Cognitive Services', 'Web Dev', 'JavaScript'],
+      photoLink: '../images/Justine.png'
     },
     {
       name: 'Pablo',
-      techFocus: ['Azure', 'IaaS', 'Web'],
+      techFocus: ['Azure', 'IaaS', 'Web Dev'],
       photoLink: '../images/Pablo.jpg'
     },
     {
       name: 'Sara',
-      techFocus: ['Python', 'C#', 'Visual Studio', 'Web Apps', 'Cognitive Services', 'Azure Media Services'],
+      techFocus: ['Python', 'C#', 'Cognitive Services', 'Azure Media Services'],
       photoLink: '../images/Sara.jpg'
     },
     {
       name: 'Shan',
-      techFocus: ['Ruby on Rails', 'Java', 'Python', 'Distributed Systems', 'Web Development'],
+      techFocus: ['Ruby on Rails', 'Java', 'Python', 'Distributed Systems'],
       photoLink: '../images/Shan.jpg'
     },
     {
       name: 'Tim',
-      techFocus: ['Python', 'JavaScript', 'Azure', 'Web Dev', 'Blockchain', 'Virtual Machines', 'Mongo DB', 'SQL', 'C#'],
+      techFocus: ['Azure', 'Blockchain', 'JavaScript', 'Mongo DB', 'C#'],
       photoLink: '../images/Tim.jpg'
     },
     {
