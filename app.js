@@ -20,6 +20,13 @@ server.post('/api/messages', connector.listen())
 const model = `https://api.projectoxford.ai/luis/v1/application?id=${process.env.LUIS_ID}&subscription-key=${process.env.LUIS_KEY}&verbose=true`
 bot.recognizer(new builder.LuisRecognizer(model))
 
+bot.dialog('/', [
+  (session, args, next) => {
+    session.send('Hello there!')
+    session.endDialog('I can help you get an Azure Code, find resources, or connect you with our Microsoft team! What would you like help with?')
+  }
+])
+
 bot.library(require('./app/dialogs/greeting').createLibrary())
 bot.library(require('./app/dialogs/teamInfo').createLibrary())
 bot.library(require('./app/dialogs/techHelp').createLibrary())
