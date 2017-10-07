@@ -1,22 +1,48 @@
 module.exports = {
   hackName: 'CalHacks',
-  surveyLink: 'aka.ms/CalHacksSurvery',
-  prize: 'an XBox One',
+  surveyLink: 'https://aka.ms/CalHacks',
+  teamEmail: 'calhacks@microsoft.com',
+  prize: 'GoPro Hero 5',
   teamMembers: [
     {
+      name: 'Alina',
+      techFocus: ['Java', 'Python'],
+      photoLink: '../images/Alina.jpg'
+    },
+    {
+      name: 'Davies',
+      techFocus: ['Algorithms', 'NLP', 'UI/UX', 'Web Dev'],
+      photoLink: '../images/Davies.png'
+    },
+    {
       name: 'Justine',
-      techFocus: ['Bot Framework', 'Cognitive Services', 'Web'],
-      photoLink: 'samplelink.com'
+      techFocus: ['Bot Framework', 'Cognitive Services', 'Web Dev', 'JavaScript'],
+      photoLink: '../images/Justine.png'
     },
     {
-      name: 'James',
-      techFocus: ['JavaScript', 'Web'],
-      photoLink: 'samplelink.com'
+      name: 'Pablo',
+      techFocus: ['Azure', 'IaaS', 'Web Dev'],
+      photoLink: '../images/Pablo.jpg'
     },
     {
-      name: 'Annie',
-      techFocus: ['Cognitive Services', 'Logistics'],
-      photoLink: 'samplelink.com'
+      name: 'Sara',
+      techFocus: ['Python', 'C#', 'Cognitive Services', 'Azure Media Services'],
+      photoLink: '../images/Sara.jpg'
+    },
+    {
+      name: 'Shan',
+      techFocus: ['Ruby on Rails', 'Java', 'Python', 'Distributed Systems'],
+      photoLink: '../images/Shan.jpg'
+    },
+    {
+      name: 'Tim',
+      techFocus: ['Azure', 'Blockchain', 'JavaScript', 'Mongo DB', 'C#'],
+      photoLink: '../images/Tim.jpg'
+    },
+    {
+      name: 'Yashika',
+      techFocus: ['General Microsoft Tech'],
+      photoLink: '../images/Yashika.png'
     }
   ]
 }

@@ -87,7 +87,7 @@ module.exports = {
         session.endDialog('Whoops! Looks like we ran out of Azure passes, head to the booth and we\'ll help you out!')
         return
       }
-      // TODO: Investigate why this isn't .Code._
+
       const row = result.entries[0].RowKey._
       session.userData.code = row
       updateCreditTable(row)
