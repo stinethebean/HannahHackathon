@@ -3,6 +3,7 @@ module.exports = {
   surveyLink: 'https://aka.ms/CalHacks',
   teamEmail: 'calhacks@microsoft.com',
   prize: 'a GoPro Hero 5',
+  boothLocation: 'near the support desk on the first floor',
   teamMembers: [
     {
       name: 'Alina',
