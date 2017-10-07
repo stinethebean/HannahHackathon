@@ -20,13 +20,12 @@ lib.dialog('/', [
         if (`tech::${t}` === techType) {
           session.dialogData.choice = i
           next()
-          return
         }
       })
+    } else {
+      session.send('A great first step to getting help is to head to https://docs.microsoft.com, but if you need something more specific I\'d be more than happy to help!')
+      builder.Prompts.choice(session, 'Which technology do you need help with? (Choose a number)', techNames)
     }
-
-    session.send('A great first step to getting help is to head to https://docs.microsoft.com, but if you need something more specific I\'d be more than happy to help!')
-    builder.Prompts.choice(session, 'Which technology do you need help with? (Choose a number)', techNames)
   },
   function (session, results) {
     if (results.resumed) {
